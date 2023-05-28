@@ -151,6 +151,19 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "authorized",
+						"type": "address"
+					}
+				],
+				"name": "addAuthorized",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "account",
 						"type": "address"
 					},
@@ -198,6 +211,19 @@
 			{
 				"inputs": [
 					{
+						"internalType": "string",
+						"name": "cidHash",
+						"type": "string"
+					}
+				],
+				"name": "confirmUpload",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "uint256",
 						"name": "id",
 						"type": "uint256"
@@ -230,6 +256,25 @@
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "numOfMeta",
+						"type": "uint256"
+					}
+				],
+				"name": "getIds",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
 						"internalType": "address",
 						"name": "account",
 						"type": "address"
@@ -252,6 +297,48 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "metadataHash",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "receiver",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "quantity",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "owner",
 				"outputs": [
@@ -262,6 +349,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "authorized",
+						"type": "address"
+					}
+				],
+				"name": "removeAuthorized",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -378,6 +478,25 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "tokenToFolderId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "id",
 						"type": "uint256"
 					}
@@ -410,7 +529,7 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "tokenId",
 						"type": "uint256"
 					}
 				],
@@ -464,9 +583,6 @@
 				},
 				"transferOwnership(address)": {
 					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
-				},
-				"uri(uint256)": {
-					"details": "See {IERC1155MetadataURI-uri}. This implementation returns the same URI for *all* token types. It relies on the token type ID substitution mechanism https://eips.ethereum.org/EIPS/eip-1155#metadata[defined in the EIP]. Clients calling this function must replace the `\\{id\\}` substring with the actual token type ID."
 				}
 			},
 			"version": 1
@@ -606,11 +722,19 @@
 			]
 		},
 		"SnowmenGame.sol": {
-			"keccak256": "0x4a00a129d8883ea79058abbb3fb3968dcb7d5f5f07228d6c1734bec1f80ace19",
+			"keccak256": "0xc63539fb9934fc45122c047a874b158e1b81a61938ed3fcdc67be430c1f19a0a",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0529fdba2b9b0ba2853618de0da48a3bde05ec5f14510fc6f86a25a6c91c31f8",
-				"dweb:/ipfs/Qmc8L3T6ZjgtokHxE9bqBwgzBhrvJM5DB9AV59TVd7rNwg"
+				"bzz-raw://4a0be26ceedc065cbabe85b2e3ed4c6d22655be4fdddd6c8eb3f153993418e01",
+				"dweb:/ipfs/Qme7ejW96tsP4xCQgZvA5fv4pXUJohEipYawz3nssYCmSY"
+			]
+		},
+		"hardhat/console.sol": {
+			"keccak256": "0x60b0215121bf25612a6739fb2f1ec35f31ee82e4a8216c032c8243d904ab3aa9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6e29880d33dd479bb046ba306993d26ccb779a4b1d94a046cb3567f22948bb4d",
+				"dweb:/ipfs/QmfTY1qzPt5C63Wc7y6JqfZr5899NRvXYdCpyLzR5FXQic"
 			]
 		}
 	},
