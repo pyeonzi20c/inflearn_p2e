@@ -49,6 +49,11 @@ contract SnowmenSales is Ownable, ERC1155Holder {
         uint256 timestamp
     );
 
+    event Withdraw(
+        address owner,
+        uint256 amount
+    );
+
     constructor(address snowmenErc1155, address snowmenErc20) {
 
         snowmenGame = IERC1155(snowmenErc1155);
@@ -122,4 +127,18 @@ contract SnowmenSales is Ownable, ERC1155Holder {
         );
     }
 
+    function getBalance() public view returns (uint256) {
+        return address(this).balance;
+    }
+
+    function withdraw() external onlyOwner() {
+        uint256 amount = getBalance();
+        require(amount != 0, "insufficent balance");
+        (bool success,) = msg.sender.call{value: amount}("");
+        require(success, "unable to withdraw matic");
+        emit Withdraw(
+            msg.sender,
+            amount
+        );
+    }
 }

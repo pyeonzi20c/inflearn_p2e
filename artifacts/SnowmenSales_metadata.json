@@ -127,6 +127,25 @@
 					{
 						"indexed": false,
 						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Withdraw",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
 						"name": "operator",
 						"type": "address"
 					},
@@ -180,6 +199,19 @@
 				"name": "buyTicket",
 				"outputs": [],
 				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -374,6 +406,13 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -513,11 +552,11 @@
 			]
 		},
 		"SnowmenSales.sol": {
-			"keccak256": "0x4a3bbdc96f94c45d3bd410dae951f09bed41a6bc7eeed8e61e4eabce03683764",
+			"keccak256": "0x5bc77119a81d24ef063914a66bb0235ba2ff2a14a47b1c219266ac1373572005",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9a813443b8a3ff390dee9684684a26f5d980b23b991b6a4d97c9321ee4ee0714",
-				"dweb:/ipfs/QmRayq691xp2QA9denZjhenpyaX3hs5DhyoZ4KLR1yascm"
+				"bzz-raw://6abd7a29e2a1151f3a0a5ed97116f27d4bc1fd02411dd3d14150f12b2fca6eb1",
+				"dweb:/ipfs/QmYut5t5ucy2vdJDrU3DBx7MYTnx7V6xtUNa9BgKL7DaA5"
 			]
 		},
 		"hardhat/console.sol": {
